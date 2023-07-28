@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar-wrapper {
+    position: fixed; /* Фиксированная позиция */
+    top: 0; /* Прикрепляем сверху */
+    width: 100%; /* Занимает всю ширину окна просмотра */
+    background-color: #8a7f8e; /* Цвет фона навигационного меню */
+    z-index: 999; /* Установим большой z-index, чтобы оно было поверх остального контента */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-menu li {
+    text-align: center;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.nav-menu li a:hover {
+    opacity: 0.8;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+footer {
+    background-color: #8a7f8e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.center {
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+#main_text {
+    font-size: 60px;
+}
+
+#mini_text {
+    font-size: 20px;
+    margin-top: -35px;
+}
+
+#plus_block {
+    margin-top: 30px; /* Отступ сверху */
+    font-size: 50px; /* Размер текста */
+    color: #333; /* Цвет текста */
+    /* Добавьте другие стили здесь */
+}
+
+
+#plus_block ul {
+    list-style-type: disc; /* Стиль маркера списка */
+    padding-left: 30px; /* Отступ слева для списка */
+    column-count: 2;
+}
+
+#plus_block li {
+    margin-bottom: 10px; /* Отступ между пунктами списка */
+}
+
+#plus_examples {
+    border: 2px solid #333; /* Рамка обводки */
+    padding: 10px; /* Отступ внутри рамки */
+    border-radius: 10px; /* Закругление углов рамки */
+    background-color: #778899;
+    font-size: 35px;
+    color: Black;
+    transition: border-width 0.2s ease; /* Анимация увеличения ширины обводки в течение 0.3 секунды с плавным переходом */
+}
+
+#plus_examples:hover {
+    border-width: 10px; /* Увеличиваем ширину обводки при наведении */
+}
+
+#plus_block h3#plus_text {
+    font-size: 50px; /* Размер текста */
+    color: #333; /* Цвет текста */
+}
+
+.hidden {
+  display: none;
+}
+
+#minus_block {
+  cursor: pointer; /* Добавляем курсор-указатель при наведении */
+}
+
+#minus_text {
+  font-size: 50px;
+}
+
+#minus_examples {
+  font-size: 100px;
+}
+
+
+

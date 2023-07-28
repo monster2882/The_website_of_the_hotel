@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link type="text/css" href="{% static 'hotel_bristol/css/styles.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <script src="{% static 'hotel_bristol/js/scripts.js' %}"></script>
+</head>
+<body>
+    <div class="navbar-wrapper">
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/rent/">Аренда номера</a></li>
+                <li><a href="/about/">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <footer>
+        <!-- Здесь может быть содержимое подвала страницы -->
+    </footer>
+</body>
+</html>
+
+<style>
+    #hostel_name {
+    font-size: 100px;
+    color: #0a0a0a; /* Серый цвет текста */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Тень текста */
+    box-shadow: 0 0 10px #555; /* Обводка текста в сером цвете */
+    font-family: 'Borel', sans-serif;
+    background-image: url('{% static "hotel_bristol/images/hotel.png" %}');
+    background-size: cover; /* Подстройте размер фона в соответствии с вашими потребностями */
+}
+</style>

@@ -1,0 +1,32 @@
+{% extends 'hotel_bristol/base.html' %}
+
+{% block content %}
+
+    <!-- Вставляем свой контент -->
+    <h1 class="center" id="main_text">Добро пожаловать на сайт нашей гостиницы!</h1>
+    <p class="center" id="mini_text">Мы предлагаем уютные номера различных типов для вашего комфортного отдыха по приятной цене.</p>
+    <h2 class="center" id="hostel_name">Bristol</h2>
+    <div class="center" id="plus_block">
+        <h3 id="plus_text">Наши плюсы:</h3>
+        <ul id="plus_examples">
+            <li>Удобное расположение</li>
+            <li>Комфортабельные номера</li>
+            <li>Приветливый персонал</li>
+            <li>До моря 2 минуты</li>
+            <li>Рядом есть 2 больших ТРЦ</li>
+            <li>Бесплатный вай-фай и парковка</li>
+            <!-- Добавьте другие плюсы здесь -->
+        </ul>
+    </div>
+    <div class="center" id="minus_block" onmouseover="showTable()" onmouseout="hideTable()">
+        <h3 id="minus_text">Наши минусы:</h3>
+        <table id="minus_examples" class="hidden">
+            <tr>
+                <td>А их нет...</td>
+            </tr>
+        </table>
+    </div>
+
+
+{% endblock content %}
+
