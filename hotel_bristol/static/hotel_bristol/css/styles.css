@@ -70,7 +70,7 @@ footer {
 #plus_block {
     margin-top: 30px; /* Отступ сверху */
     font-size: 50px; /* Размер текста */
-    color: #333; /* Цвет текста */
+    color: #000000; /* Цвет текста */
     /* Добавьте другие стили здесь */
 }
 
@@ -89,7 +89,7 @@ footer {
     border: 2px solid #333; /* Рамка обводки */
     padding: 10px; /* Отступ внутри рамки */
     border-radius: 10px; /* Закругление углов рамки */
-    background-color: #778899;
+    background-color: #DCDCDC;
     font-size: 35px;
     color: Black;
     transition: border-width 0.2s ease; /* Анимация увеличения ширины обводки в течение 0.3 секунды с плавным переходом */
@@ -101,7 +101,6 @@ footer {
 
 #plus_block h3#plus_text {
     font-size: 50px; /* Размер текста */
-    color: #333; /* Цвет текста */
 }
 
 .hidden {
@@ -117,8 +116,58 @@ footer {
 }
 
 #minus_examples {
-  font-size: 100px;
+  font-size: 60px;
 }
 
+.divider {
+    margin-top: 20px; /* Регулируйте отступ сверху по вашему предпочтению */
+    border: none;
+    border-top: 5px solid black; /* Цвет и стиль линии */
+}
 
+.room {
+    border: 3px solid gray; /* Обводка черной границей */
+    padding: 10px; /* Отступ внутри блока для разделения от границы */
+    margin-bottom: 20px; /* Отступ между блоками с видами номеров */
+    background-color: #DCDCDC;
+}
 
+#room_options_text {
+    font-size: 50px;
+}
+
+#name_nomer {
+    font-size: 30px;
+}
+
+#nomer_about {
+    font-size: 24px;
+}
+
+#price {
+    font-size: 30px;
+    color: #0a0a0a;
+}
+.room-slider {
+    max-width: 300px; /* Максимальная ширина слайдера */
+    margin: 0 auto; /* Центрирование слайдера по горизонтали */
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 18px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slick-prev {
+    float: left;
+}
+
+.slick-next {
+    float: right;
+}

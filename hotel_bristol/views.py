@@ -1,9 +1,10 @@
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from django.shortcuts import render
+import requests
 
 
 def home(request):
-    return render(request, 'hotel_bristol/home.html', {'title': 'Главная страница'})
+    return render(request, 'hotel_bristol/home.html')
 
 
 def rent(request):

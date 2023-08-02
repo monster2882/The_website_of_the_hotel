@@ -1,8 +1,9 @@
 {% extends 'hotel_bristol/base.html' %}
+{% load static %}
+
 
 {% block content %}
 
-    <!-- Вставляем свой контент -->
     <h1 class="center" id="main_text">Добро пожаловать на сайт нашей гостиницы!</h1>
     <p class="center" id="mini_text">Мы предлагаем уютные номера различных типов для вашего комфортного отдыха по приятной цене.</p>
     <h2 class="center" id="hostel_name">Bristol</h2>
@@ -25,8 +26,58 @@
                 <td>А их нет...</td>
             </tr>
         </table>
+        <hr class="divider">
     </div>
 
+    <div class="center" id="room_options">
+        <h3 id="room_options_text">Наши номера:</h3>
+        <div class="room">
+            <h4 id="name_nomer">Номер "Стандарт"</h4>
+            <style>
+                .room-slider img {
+                    width: 100%;
+                    height: auto;
+                }
+            </style>
+            <div class="room-slider" id="slider1">
+                <div><img src="{% static 'hotel_bristol/images/standart1.png' %}" alt="Номер Стандарт - 1"></div>
+                <div><img src="{% static 'hotel_bristol/images/standart2.png' %}" alt="Номер Стандарт - 2"></div>
+        </div>
+            <p id="nomer_about">Просторный и уютный номер с видом на город. Идеальный выбор для романтического уикенда.</p>
+            <p id="price">Цена: 3000 руб./сутки</p>
+        </div>
+        <div class="room">
+            <h4 id="name_nomer">Номер "Комфорт"</h4>
+            <p id="nomer_about">Комфортный номер с отдельной спальней и гостиной. Окна выходят на море. Отличный номер для семьи или компании.</p>
+            <p id="price">Цена: 4000 руб./сутки</p>
+        </div>
+        <div class="room">
+            <h4 id="name_nomer">Номер "Люкс"</h4>
+            <p id="nomer_about">Роскошный номер с отдельной спальней, гостиной и кухней. Панорамные окна с видом на море.</p>
+            <p id="price">Цена: 5000 руб./сутки</p>
+        </div>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#slider1').slick({
+                arrows: true,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                nextArrow: '<button type="button" class="slick-next">Next</button>'
+            });
+            // Инициализируйте слайдеры для других номеров аналогичным образом
+        });
+    </script>
+
+
+    <div id="weather-widget"></div>
+    <a class="weatherwidget-io" href="https://forecast7.com/ru/43d6039d73/sochi/" data-label_1="SOCHI" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="gray" >SOCHI WEATHER</a>
+    <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    </script>
 {% endblock content %}
-

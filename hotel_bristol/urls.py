@@ -8,7 +8,7 @@ from .views import *
 urlpatterns = [
     path("", home),
     path("arenda-nomera", rent),
-    path("about", about)
+    path("about", about),
 ]
 
 if settings.DEBUG:
